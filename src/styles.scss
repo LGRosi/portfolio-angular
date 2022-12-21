@@ -1,4 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+/* Base */
+@use './scss/base/base';
+@use './scss/base/resets';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Themes */
+@use './scss/themes/light';
+
+/* Utilities */
+@use './scss/utilities/mixins';
+@use './scss/utilities/variables';

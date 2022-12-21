@@ -1,20 +1,31 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
-import { SdfComponent } from './sdf/sdf.component';
+// General Modules
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+// Modules
+import { AppRoutingModule } from './app-routing.module';
+import { CoreModule } from './core/core.module';
+import { PagesModule } from './pages/pages.module';
+import { SharedModule } from './shared/shared.module';
+
+// Components
+import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SdfComponent
-  ],
+  declarations: [AppComponent],
   imports: [
+    // General Modules
+    BrowserAnimationsModule,
     BrowserModule,
-    BrowserAnimationsModule
+
+    // Modules
+    AppRoutingModule,
+    CoreModule,
+    PagesModule,
+    SharedModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
